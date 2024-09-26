@@ -1,0 +1,117 @@
+:root {
+    /* Colors */
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+    
+    /* Typography */
+    --font-family: 'Inter', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Body Copy */
+    --font-size-paragraph: 14px;
+    
+    /* Layout Breakpoints */
+    --breakpoint-mobile: 375px;
+    --breakpoint-desktop: 1440px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Add this */
+  html, body {
+    height: 100%;
+  }
+  
+  p {
+    font-size: var(--font-size-paragraph);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+  }
+  
+  body {
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+    display: grid;
+    place-items: center;
+  }
+  
+  .highlight {
+    color: var(--color-green);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+    height:auto;
+    border-radius: 8px;
+    background-color: var(--color-grey-800);
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Updated shadow for better depth */
+  }
+
+  .container img{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+  }
+  .profile-img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 5px;
+  }
+ .container p:nth-of-type(1){
+    font-size: 1.2rem; 
+    margin-top: 10px;
+ }
+ .container p:nth-of-type(2){
+    color: var(--color-green);
+    font-weight: 600;
+ }
+ .container p:nth-of-type(3){
+    margin-top: 15px;
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+ }
+
+ ul{
+    display: grid;
+    gap: 15px;
+    place-items: center;
+    margin: 20px;
+ }
+
+ ul li{
+    list-style: none;
+    width: 100%;
+ }
+ li button{
+    width: 100%;
+    padding-block: 10px;
+    border-radius: 8px;
+    border: none;
+    color: var(--color-white); 
+    background-color: var(--color-grey-700);
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold); /* Adjusted font weight */
+    transition: background-color 0.3s ease; /* Added transition for smooth hover effect */
+ }
+
+
+ li button:hover{
+    background-color: var(--color-green);
+    color: var(--color-grey-900);
+    font-weight: var(--font-weight-bold); 
+ }
