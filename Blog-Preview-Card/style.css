@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --backround-color: hsl(47, 88%, 63%);
+    --color-white:hsl(0, 0%, 100%);
+    --primary-gray: hsl(0, 0%, 42%);
+    --secondary-gray:hsl(0, 0%, 7%);
+
+    /* Typography */
+    --font-size:1rem;
+    --font-bold:800;
+    --font-semibold:500;
+    --font-family: 'Figtree', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    background-color: var(--backround-color);
+}
+ body{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-family);
+    display: grid;
+    place-items: center;
+}
+
+
+
+/* Card */
+.card{
+    margin:  auto;
+    width: 100%;
+    padding: 16px;
+    max-width: 350px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    min-height: 350px;
+    box-shadow:10px 10px  black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/* Card Image */
+.card-img{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.card-img img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Card Content */
+.card-content{
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Subtitle */
+.card-subtitle{
+    text-align: center;
+    padding: 8px;
+    background-color: var(--backround-color);
+    width: 80px;
+    border-radius: 8px;
+    font-weight: var(--font-bold);
+}
+
+
+/* Published Data */
+.card-pub-date{
+    font-size: 12px;
+    word-spacing: 3px;
+    color: var(--primary-gray);
+}
+
+
+/* Desc */
+.card-desc{
+    font-size:0.9rem;
+    color: var(--primary-gray);
+    line-height: 1.2rem;
+}
+
+/* Card Title */
+.card-title{
+    transition: ease-in 0.2s;
+    cursor: pointer;
+}
+.card-title:hover{
+    color:var(--backround-color);
+}
+
+
+/* Card Avatar */
+.card-avt{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.card-avt p{
+    font-weight: var(--font-bold);
+    font-size: 0.8rem;
+}
+.card-avt img{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+/* Media query for extra small devices */
+@media (max-width: 375px) {
+    .card-title{
+        font-size: 20px;
+    }
+    .card-desc{
+        font-size: 0.8rem;
+    }
+}
